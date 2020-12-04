@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    background: url('../images/dancefloor.png') no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-y: auto;
+  }
+  
+  #first {
+    background: #dddddd;
+    width: 800px;
+    height: 400px;
+    margin: 0px auto;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 20px -6px rgba(97, 89, 97, 1);
+  }
+
+  h1 {
+    color: #b32d00;
+    font-weight: bolder;
+    font-size: 58px;
+    text-align: center;
+    margin: 5px 20px 0 0;
+    padding-top: 5px;
+  }
+  
+  #time {
+      color: white;
+      text-align: right;
+      padding: 5px;
+      margin-right: 320px;
+      font-size: 22px;
+      z-index: 1;
+      display: none;
+  }
+
+  #main-canvas {
+    background-color: #7979d2;
+  }
+
+  #first {
+    display: none;
+  }
+ 
+.bar {
+  margin: 0 25% 0 25%;
+}
+
+  .bar-background {
+    filter: blur(1px) contrast(50%);
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .chat {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    position: absolute;
+    border-color: red;
+    border-width: 10px;
+  }
+
+.carmen-chat {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 5px 15px 45px;
+  width: 650px;
+}
+
+.questions {
+  width: 100%;
+  height: 150px;
+  padding: 0px 20px;
+  border-style: none;
+  background-color:#ffcccc;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 200;
+  border-radius: 45%;
+}
+
+.carmen-reaction, .carmen-question {
+  text-align: center;
+  width: 100%;
+  height: 35%;
+  margin: 10px 70px 0px 0px;
+  font-size: 20px;
+}
+
+.carmen-reaction {
+padding-top: 12px;
+}
+
+.carmen-chat-img {
+  width: 200px;
+  height: 250px;
+  margin: 5px 0 0 5px;
+}
+
+.player-chat {
+  display: flex;
+  flex-direction: row;
+  width: 650px;
+}
+
+.player-chat-img {
+  width: 140px;
+  height: 200px;
+  margin-right: 5px;
+}
+
+.answers {
+  width: 100%;
+  height: 190px;
+  border-style: none;
+  background-color: none;
+  color: #000066;
+  line-height: 10px;
+  padding: 8px 2px 10px 2px;
+}
+
+.btn-block {
+  text-align: left;
+  background-color: #4d4dff;
+  padding: 10px 10px;
+  margin-top: 10px;
+}
+
+
+ .start-bar {
+   position: absolute;
+   margin: 35px 0 0 500px;
+   color: white;
+   width: 300px;
+ }
+
+ .startbtn {
+   margin: 270px 0 0 550px;
+   position: absolute;
+   width: 300px;
+   height: 150px;
+   text-align: center;
+   background-color: #b3b3ff;
+   border-style: none;
+   color: #b30000;
+   font-size: 30px;
+   border-radius: 15%;
+  
+ }
+ .startbtn:hover {
+  background-color:#330033;
+  color: white;
+} 
+
+  
