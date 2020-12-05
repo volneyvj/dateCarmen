@@ -12,7 +12,6 @@ class canvasArea {
   }
 };
 
-
 const myCanvas = new canvasArea();
 const floor = new danceFloor(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const player = new playerOne(canvas, myCanvas.canvasW, myCanvas.canvasH);
@@ -21,7 +20,7 @@ const bar = new Bar(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const reaction = new Reaction(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const chat = new chatBoards(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const newQuestions = new questionsGame(questions);
-const timeCouting = new timeCount();
+const timeCounting = new timeCount();
 
 const audioMusic = new Audio();
 audioMusic.src = "./sounds/eletronic.mp3";
@@ -29,7 +28,7 @@ audioMusic.volume = 0.08;
 
 const barMusic = new Audio();
 barMusic.src = "./sounds/barsound.mp3";
-barMusic.volume = 0.08;
+barMusic.volume = 0.07;
 
 const ouchAudio = new Audio();
 ouchAudio.src = "./sounds/ouch.mp3";
@@ -115,16 +114,19 @@ function checkPlayerPosition() {
 }
 
 function timeMid() {
-  timeCouting.countTime();
+  timeCounting.countTime();
   let htmlTempo = '';
-  htmlTempo += `${timeCouting.time}`;
+  htmlTempo += `${timeCounting.time}`;
   document.getElementById('timeMid').innerHTML = htmlTempo;
 }
   
+function barMusicstart() {
+  barMusic.play();
+}
 
 function rollChat(clicked_btn) {
   audioMusic.pause();
-  barMusic.play();
+  setTimeout(barMusicstart, 1000);
 
   let ans1 = parseInt(clicked_btn.getAttribute("choice"), 10);
 

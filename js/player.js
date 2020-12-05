@@ -81,6 +81,33 @@ class playerOne {
             )
       }
 
+      crashWith2() {
+        return !(
+            this.top() > obstacles.bottom2() ||
+            this.bottom() < obstacles.top2() ||
+            this.left() > obstacles.right2() ||
+            this.right() < obstacles.left2() 
+            )
+      }
+
+      crashWith3() {
+        return !(
+            this.top() > obstacles.bottom3() ||
+            this.bottom() < obstacles.top3() ||
+            this.left() > obstacles.right3() ||
+            this.right() < obstacles.left3() 
+            )
+      }
+
+      crashWith4() {
+        return !(
+            this.top() > obstacles.bottom4() ||
+            this.bottom() < obstacles.top4() ||
+            this.left() > obstacles.right4() ||
+            this.right() < obstacles.left4() 
+            )
+      }
+
 
     playerPosition() {
         if (this.playerYposition <155) {

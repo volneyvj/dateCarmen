@@ -9,7 +9,7 @@ class danceFloor {
     this.danceBlocky = 50,
     this.numberOfBlocks = ((this.canvasW / this.danceBlockx) * ((this.canvasH - this.barArea) / this.danceBlocky)),
     this.colors = ["#4d4dff", "#00ffbf", "#f2f2f2"],
-    this.colors2 = ["#dfff80", "#ffffff", "#99ffcc", "#ff66a3"],
+    this.colors2 = ["#99ffe6", "#ff99cc", "#ffbb99", "#ffffff"],
     this.blur = 1,
     this.textCome ='Hey you, come to the bar!',
     this.grayscale = "80";
@@ -45,9 +45,9 @@ class danceFloor {
     this.ctx.filter = `blur(${this.blur}px)`;
     this.ctx.filter = `grayscale(${this.grayscale}%)`;
     this.ctx.drawImage(this.imgCarmen1, 570, 8, 140, 140);
-    this.ctx.font = '32px serif';
+    this.ctx.font = 'bold 34px serif';
     this.ctx.fillStyle = this.colors2[Math.floor(Math.random() * this.colors2.length - 1)];
-    this.ctx.fillText(this.textCome, 280, 50);
+    this.ctx.fillText(this.textCome, 240, 50);
   }
 
   shuffleColor() {
