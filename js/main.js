@@ -5,10 +5,10 @@ class danceFloor {
     this.canvasW = canvasW,
     this.canvasH = canvasH,
     this.barArea = 150,
-    this.danceBlockx = 50,
-    this.danceBlocky = 50,
-    this.numberOfBlocks = ((this.canvasW / this.danceBlockx) * ((this.canvasH - this.barArea) / this.danceBlocky)),
-    this.colors = ["#4d4dff", "#00ffbf", "#f2f2f2"],
+    this.danceBlockx = 75,
+    this.danceBlocky = 75,
+    this.numberOfBlocks = ((this.canvasW / this.danceBlockx) * ((this.canvasH - this.barArea) / this.danceBlocky)+1),
+    this.colors = ["#ff80ff", "#b3ffcc", "#99ebff"],
     this.colors2 = ["#99ffe6", "#ff99cc", "#ffbb99", "#ffffff"],
     this.blur = 1,
     this.textCome ='Hey you, come to the bar!',
@@ -27,7 +27,7 @@ class danceFloor {
     });
 
     imgBar.src = './images/bar.jpg';
-    imgCarmen1.src = './images/carmen-bar.png'
+    imgCarmen1.src = './images/carmen-main.png'
 
   }
 
@@ -44,29 +44,36 @@ class danceFloor {
   drawCarmen() {
     this.ctx.filter = `blur(${this.blur}px)`;
     this.ctx.filter = `grayscale(${this.grayscale}%)`;
-    this.ctx.drawImage(this.imgCarmen1, 570, 8, 140, 140);
-    this.ctx.font = 'bold 34px serif';
+    this.ctx.drawImage(this.imgCarmen1, 570, 12, 160, 180);
+    this.ctx.font = 'bold 28px Verdana';
     this.ctx.fillStyle = this.colors2[Math.floor(Math.random() * this.colors2.length - 1)];
-    this.ctx.fillText(this.textCome, 240, 50);
+    this.ctx.fillText(this.textCome, 200, 50);
   }
 
   shuffleColor() {
     let axisX = 0;
     let axisY = this.barArea;
-    this.ctx.filter = "blur(0px)";
     this.ctx.clearRect(0, axisY, this.canvasW, this.canvasH - this.barArea);
-
+    let k = 0;
+    let bright = 100;
+   
     for (let i = 0; i <= this.numberOfBlocks; i += 1) {
 
-      let color = this.colors[Math.floor(Math.random() * this.colors.length - 1)];
+      // let color = this.colors[Math.floor(Math.random() * this.colors.length - 1)];
 
-      // this.ctx.beginPath();
-      this.ctx.fillStyle = color;
-      this.ctx.fillRect(axisX, axisY, this.danceBlockx, this.danceBlocky);
-      // ctx.lineWidth = 100;
-      // ctx.strokeStyle = "black";
-      // ctx.stroke();
-      // ctx.closePath();
+k = Math.floor(Math.random() * this.colors.length);
+bright = Math.floor(Math.random() * 80) + 65;
+
+this.ctx.strokeStyle = '#000000'; 
+this.ctx.lineWidth = 1; 
+this.ctx.setLineDash([]);
+this.ctx.filter = `opacity(90%)`;
+this.ctx.filter = `brightness(${bright}%)`;
+this.ctx.fillStyle = this.colors[k];
+this.ctx.fillRect(axisX, axisY, this.danceBlockx, this.danceBlocky);
+
+this.ctx.strokeRect(axisX, axisY, this.danceBlockx, this.danceBlocky);
+
 
       if (axisX >= this.canvasW - this.danceBlockx) {
         axisX = 0;
@@ -75,6 +82,18 @@ class danceFloor {
         axisX += this.danceBlockx;
         axisY += 0;
       }
+
+    
+   
     }
   }
 }
+
+
+
+//  colors :
+//  #b3daff blue
+//  #ff80ff pink
+// 99ffeb green
+// ffeecc orange
+

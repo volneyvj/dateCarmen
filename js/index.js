@@ -138,14 +138,14 @@ function rollChat(clicked_btn) {
   if (chat.n !== 0) {
 
     if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === -1) {
-      reaction.imgURL = './images/carmen-negative.png';
+      reaction.imgURL = './images/cabeca2.png';
     } else if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === 0) {
-      reaction.imgURL = './images/carmen-main.png';
+      reaction.imgURL = './images/cabeca5.png';
     } else if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === 1) {
-      reaction.imgURL = './images/carmen-positive.png';
+      reaction.imgURL = './images/cabeca4.png';
     }
   } else {
-    reaction.imgURL = './images/carmen-bar.png';
+    reaction.imgURL = './images/cabeca3.png';
   }
   if (chat.n !== 0) {
     chatNumber = chat.n
@@ -156,7 +156,7 @@ function rollChat(clicked_btn) {
   player.score += newQuestions.randomQuestions[chatNumber - 1].answers[lastAnswer].point
 
   let html = '';
-  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bar-background.jpg" width="740" height="520"></div>`;
+  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bg-date-carmen.png" width="790" height="500"></div>`;
   html += `<div class="chat">`;
   if (chat.n !== 0) {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">${newQuestions.randomQuestions[chatNumber-1].answers[lastAnswer].cReaction}</div>`;
@@ -164,7 +164,7 @@ function rollChat(clicked_btn) {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">Hello you there ! </div>`;
   }
   html += `<div class="carmen-question">${newQuestions.randomQuestions[newQuestions.questionNumber].cQuestions}</div></div>`;
-  html += `<div><img class="carmen-chat-img" src="${reaction.imgURL}"></div></div>`;
+  html += `<div class="face_img"><img class="carmen-chat-img" src="${reaction.imgURL}"></div></div>`;
   html += `<div class="player-chat"><div><img class="player-chat-img" src="./images/cepacol-guy-right.png"></div>`;
   html += `<div class="answers"><button type="button" choice="0" class="btn btn-primary btn-lg btn-block" onclick="rollChat(this)">${newQuestions.randomQuestions[chat.n].answers[0].pAnswers}</button>`;
   html += `<button type="button" choice="1" class="btn btn-primary btn-lg btn-block" onclick="rollChat(this)">${newQuestions.randomQuestions[chat.n].answers[1].pAnswers}</button>`;
