@@ -12,7 +12,6 @@ class canvasArea {
   }
 };
 
-
 const myCanvas = new canvasArea();
 const floor = new danceFloor(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const player = new playerOne(canvas, myCanvas.canvasW, myCanvas.canvasH);
@@ -21,7 +20,7 @@ const bar = new Bar(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const reaction = new Reaction(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const chat = new chatBoards(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const newQuestions = new questionsGame(questions);
-const timeCouting = new timeCount();
+const timeCounting = new timeCount();
 
 const audioMusic = new Audio();
 audioMusic.src = "./sounds/eletronic.mp3";
@@ -29,7 +28,7 @@ audioMusic.volume = 0.08;
 
 const barMusic = new Audio();
 barMusic.src = "./sounds/barsound.mp3";
-barMusic.volume = 0.08;
+barMusic.volume = 0.07;
 
 const ouchAudio = new Audio();
 ouchAudio.src = "./sounds/ouch.mp3";
@@ -115,16 +114,19 @@ function checkPlayerPosition() {
 }
 
 function timeMid() {
-  timeCouting.countTime();
+  timeCounting.countTime();
   let htmlTempo = '';
-  htmlTempo += `${timeCouting.time}`;
+  htmlTempo += `${timeCounting.time}`;
   document.getElementById('timeMid').innerHTML = htmlTempo;
 }
   
+function barMusicstart() {
+  barMusic.play();
+}
 
 function rollChat(clicked_btn) {
   audioMusic.pause();
-  barMusic.play();
+  setTimeout(barMusicstart, 1000);
 
   let ans1 = parseInt(clicked_btn.getAttribute("choice"), 10);
 
@@ -136,14 +138,14 @@ function rollChat(clicked_btn) {
   if (chat.n !== 0) {
 
     if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === -1) {
-      reaction.imgURL = './images/carmen-negative.png';
+      reaction.imgURL = './images/cabeca2.png';
     } else if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === 0) {
-      reaction.imgURL = './images/carmen-main.png';
+      reaction.imgURL = './images/cabeca5.png';
     } else if (newQuestions.randomQuestions[chat.n - 1].answers[lastAnswer].point === 1) {
-      reaction.imgURL = './images/carmen-positive.png';
+      reaction.imgURL = './images/cabeca4.png';
     }
   } else {
-    reaction.imgURL = './images/carmen-bar.png';
+    reaction.imgURL = './images/cabeca3.png';
   }
   if (chat.n !== 0) {
     chatNumber = chat.n
@@ -154,7 +156,7 @@ function rollChat(clicked_btn) {
   player.score += newQuestions.randomQuestions[chatNumber - 1].answers[lastAnswer].point
 
   let html = '';
-  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bar-background.jpg" width="740" height="520"></div>`;
+  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bg-date-carmen.png" width="790" height="500"></div>`;
   html += `<div class="chat">`;
   if (chat.n !== 0) {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">${newQuestions.randomQuestions[chatNumber-1].answers[lastAnswer].cReaction}</div>`;
@@ -162,7 +164,7 @@ function rollChat(clicked_btn) {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">Hello you there ! </div>`;
   }
   html += `<div class="carmen-question">${newQuestions.randomQuestions[newQuestions.questionNumber].cQuestions}</div></div>`;
-  html += `<div><img class="carmen-chat-img" src="${reaction.imgURL}"></div></div>`;
+  html += `<div class="face_img"><img class="carmen-chat-img" src="${reaction.imgURL}"></div></div>`;
   html += `<div class="player-chat"><div><img class="player-chat-img" src="./images/cepacol-guy-right.png"></div>`;
   html += `<div class="answers"><button type="button" choice="0" class="btn btn-primary btn-lg btn-block" onclick="rollChat(this)">${newQuestions.randomQuestions[chat.n].answers[0].pAnswers}</button>`;
   html += `<button type="button" choice="1" class="btn btn-primary btn-lg btn-block" onclick="rollChat(this)">${newQuestions.randomQuestions[chat.n].answers[1].pAnswers}</button>`;

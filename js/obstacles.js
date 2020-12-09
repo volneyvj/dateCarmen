@@ -85,9 +85,9 @@ class Obstacle {
         }
 
         if (this.signal4 === 'right') {
-            this.img4X += 75;
+            this.img4X += 65;
         } else {
-            this.img4X -= 75;
+            this.img4X -= 65;
         }
     }
     
@@ -98,7 +98,7 @@ class Obstacle {
         return this.img1Y + this.imgsHeight - 25;
       }
       left1() {
-        return this.img1X;
+        return this.img1X + 25;
       }
       right1() {
         return this.img1X + this.imgsWidth - 25;
@@ -111,7 +111,7 @@ class Obstacle {
         return this.img2Y + this.imgsHeight - 25;
       }
       left2() {
-        return this.img2X;
+        return this.img2X + 25;
       }
       right2() {
         return this.img2X + this.imgsWidth - 25;
@@ -124,7 +124,7 @@ class Obstacle {
         return this.img3Y + this.imgsHeight - 25;
       }
       left3() {
-        return this.img3X;
+        return this.img3X + 25;
       }
       right3() {
         return this.img3X + this.imgsWidth - 25;
@@ -137,7 +137,7 @@ class Obstacle {
         return this.img4Y + this.imgsHeight - 25;
       }
       left4() {
-        return this.img4X;
+        return this.img4X + 25;
       }
       right4() {
         return this.img4X + this.imgsWidth - 25;

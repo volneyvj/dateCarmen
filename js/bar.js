@@ -9,13 +9,6 @@ class Bar {
         this.barXposition = 35,
         this.barYposition = 15;
          
-        const imgBarback = new Image();
-
-        imgBarback.addEventListener('load', () => {
-            this.imgBarback = imgBarback
-        });
-
-        imgBarback.src = './images/bar-background.jpg';
     }
 
     // drawBarback() {
@@ -37,7 +30,7 @@ class Bar {
                 this.reactionHeight = 300,
                 this.reactionX = bar.barWidth - 160,
                 this.reactionY = bar.barYposition + 140,
-                this.imgURL = './images/carmen-bar.png';       
+                this.imgURL = './images/cabeca3.png';       
             }
 
         
