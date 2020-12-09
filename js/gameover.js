@@ -4,8 +4,13 @@ function checkGameOver() {
       ouchAudio.play();
       stop();
       return true;
-     
     }
+
+    if (player.score === 5) {
+      win();
+      return true;
+  }
+
     if (newQuestions.answeredQuestions.length > 11) {
       stop();
       return true;
@@ -13,10 +18,6 @@ function checkGameOver() {
     if (player.score === -3) {
        stop();
        return true;
-    }
-    if (player.score === 5) {
-        win();
-        return true;
     }
     if (timeCounting.time <=0) {
         stop()
