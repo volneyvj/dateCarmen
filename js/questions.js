@@ -266,34 +266,6 @@ class questionsGame {
       }
     }
 }
-//   console.log(this.randomQuestions);
-            // let randomAnswers = [];
-            // for (let j = 0; j<=this.randomQuestions.length; j+=1) {
-            // let randomN2 = Math.floor(Math.random() * (3));
-            // console.log(randomN2);
-            // }
-
-  
-
-    //   checkAnswer(card1, card2) {
-    //       this.pairsClicked += 1;
-    //       if (card1 === card2) {
-    //         this.pairsGuessed += 1;
-    //         return true 
-    //       } else {
-    //       return false
-    //       }
-    //     }
-
-    //     isFinished() {
-    //       if (this.pairsGuessed === this.cards.length / 2) {
-    //       return true
-    //     } else {
-    //     return false
-    //     }
-    //     }
-
-
 
 class chatBoards {
     constructor(canvas, canvasW, canvasH) {
