@@ -1,27 +1,21 @@
 function checkGameOver() {
 
-    if (player.crashWith() || player.crashWith2() || player.crashWith3() || player.crashWith4() ) {
+  for (let i=0; i < obstacles.length; i+=1) {
+    if (player.crashWith(i)) {
       ouchAudio.play();
       stop();
       return true;
     }
+  }
 
     if (player.score === 5) {
       win();
       return true;
   }
 
-    if (newQuestions.answeredQuestions.length > 11) {
+    if (newQuestions.answeredQuestions.length > 11 || player.score === -3 || timeCounting.time <=0) {
       stop();
       return true;
-    }
-    if (player.score === -3) {
-       stop();
-       return true;
-    }
-    if (timeCounting.time <=0) {
-        stop()
-        return true;
     }
   }
   
@@ -66,8 +60,6 @@ function checkGameOver() {
     ctx.font = '38px serif';
     ctx.fillText('!! WE GOT A WINNER !! ', myCanvas.canvasW / 2, myCanvas.canvasH / 2 - 25);
     ctx.fillText(`Final Score: ${player.score} - Completed in: ${(250 - timeCounting.time)} seconds`, myCanvas.canvasW / 2, myCanvas.canvasH * 2 / 3);
-    
-
   }
 
   function showStart() {

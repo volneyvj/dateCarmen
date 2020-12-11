@@ -57,8 +57,7 @@ class playerOne {
         }
     }
 
-
-    top() {
+      top() {
         return this.playerYposition;
       }
       bottom() {
@@ -72,42 +71,14 @@ class playerOne {
       }
 
 
-    crashWith() {
+    crashWith(obstacleIndex) {
         return !(
-            this.top() > obstacles.bottom1() ||
-            this.bottom() < obstacles.top1() ||
-            this.left() > obstacles.right1() ||
-            this.right() < obstacles.left1() 
+            this.top() > obstacles[obstacleIndex].bottom() ||
+            this.bottom() < obstacles[obstacleIndex].top() ||
+            this.left() > obstacles[obstacleIndex].right() ||
+            this.right() < obstacles[obstacleIndex].left() 
             )
       }
-
-      crashWith2() {
-        return !(
-            this.top() > obstacles.bottom2() ||
-            this.bottom() < obstacles.top2() ||
-            this.left() > obstacles.right2() ||
-            this.right() < obstacles.left2() 
-            )
-      }
-
-      crashWith3() {
-        return !(
-            this.top() > obstacles.bottom3() ||
-            this.bottom() < obstacles.top3() ||
-            this.left() > obstacles.right3() ||
-            this.right() < obstacles.left3() 
-            )
-      }
-
-      crashWith4() {
-        return !(
-            this.top() > obstacles.bottom4() ||
-            this.bottom() < obstacles.top4() ||
-            this.left() > obstacles.right4() ||
-            this.right() < obstacles.left4() 
-            )
-      }
-
 
     playerPosition() {
         if (this.playerYposition <155) {
