@@ -15,12 +15,22 @@ class canvasArea {
 const myCanvas = new canvasArea();
 const floor = new danceFloor(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const player = new playerOne(canvas, myCanvas.canvasW, myCanvas.canvasH);
-const obstacles = new Obstacle(canvas, myCanvas.canvasW);
 const bar = new Bar(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const reaction = new Reaction(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const chat = new chatBoards(canvas, myCanvas.canvasW, myCanvas.canvasH);
 const newQuestions = new questionsGame(questions);
 const timeCounting = new timeCount();
+
+
+// criando obstacles 
+
+const obstacles = [
+new Obstacle(canvas, myCanvas.canvasW, "./images/bettyfeia.png", 740, 430, 'left', 10), 
+new Obstacle(canvas, myCanvas.canvasW, "./images/vandiesel.png", 0, 340, 'right', 20),
+new Obstacle(canvas, myCanvas.canvasW, "./images/davidh.png", 0, 260, 'right', 35),
+new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 160, 'left', 65)
+];
+console.log(obstacles);
 
 const audioMusic = new Audio();
 audioMusic.src = "./sounds/eletronic.mp3";
@@ -72,15 +82,17 @@ function startGame() {
   floor.shuffleColor();
   player.drawPlayer();
   player.playerPosition();
-  obstacles.drawObst();
-  obstacles.newObstpos();
-  checkGameOver();
 
+  for (let i=0; i<obstacles.length; i+=1) {
+    obstacles[i].drawObst(i);
+    obstacles[i].newObstpos(i);
+  }
+  
+  checkGameOver();
   if (checkGameOver()) {
     clearInterval(loop);
     clearInterval(contagem);
   }
-
 }
 
 document.addEventListener('keydown', e => {

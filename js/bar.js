@@ -8,16 +8,7 @@ class Bar {
         this.barHeight = 520,
         this.barXposition = 35,
         this.barYposition = 15;
-         
     }
-
-    // drawBarback() {
-        
-    //     this.ctx.filter = "blur(2px)";
-    //     this.ctx.filter = "contrast(45%)"
-    //     this.ctx.drawImage(this.imgBarback, this.barXposition, this.barYposition, this.barWidth, this.barHeight);
-    //     // reaction.drawReaction();
-    //     }
     
 }
         class Reaction {
@@ -32,8 +23,5 @@ class Bar {
                 this.reactionY = bar.barYposition + 140,
                 this.imgURL = './images/cabeca3.png';       
             }
-
-        
-
-        
+    
 }

@@ -90,7 +90,6 @@ this.ctx.strokeRect(axisX, axisY, this.danceBlockx, this.danceBlocky);
 }
 
 
-
 //  colors :
 //  #b3daff blue
 //  #ff80ff pink
