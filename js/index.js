@@ -33,15 +33,15 @@ new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 160, 'left', 65
 console.log(obstacles);
 
 const audioMusic = new Audio();
-audioMusic.src = "./sounds/eletronic.mp3";
+audioMusic.src = "./sound/eletronic.mp3";
 audioMusic.volume = 0.08;
 
 const barMusic = new Audio();
-barMusic.src = "./sounds/barsound.mp3";
+barMusic.src = "./sound/barsound.mp3";
 barMusic.volume = 0.07;
 
 const ouchAudio = new Audio();
-ouchAudio.src = "./sounds/ouch.mp3";
+ouchAudio.src = "./sound/ouch.mp3";
 ouchAudio.volume = 0.2;
 
 function clearCanvas() {
@@ -87,7 +87,7 @@ function startGame() {
     obstacles[i].drawObst(i);
     obstacles[i].newObstpos(i);
   }
-  
+
   checkGameOver();
   if (checkGameOver()) {
     clearInterval(loop);
