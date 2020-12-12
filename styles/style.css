@@ -93,7 +93,7 @@ padding-top: 12px;
 .carmen-chat-img {
   width: 140px;
   height: 175px;
-  margin: 20px 0 0 55px;
+  margin: 20px 20px 0 0px;
 }
 
 .player-chat {
@@ -131,7 +131,7 @@ padding-top: 12px;
    margin: 35px 0 0 500px;
    color: white;
    background-color: red;
-   width: 300px;
+   width: 340px;
  }
 
  .startbtn {
@@ -152,4 +152,8 @@ padding-top: 12px;
   color: white;
 } 
 
+#info {
+  background-color:#cc0000;
+  text-align: center;
+}
   

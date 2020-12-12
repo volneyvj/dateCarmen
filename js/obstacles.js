@@ -39,7 +39,7 @@ class Obstacle {
     }
     
       top() {
-        return this.imgY;
+        return this.imgY -15;
       }
       bottom() {
         return this.imgY + this.imgsHeight - 25;

@@ -5,9 +5,9 @@ class danceFloor {
     this.canvasW = canvasW,
     this.canvasH = canvasH,
     this.barArea = 150,
-    this.danceBlockx = 75,
-    this.danceBlocky = 75,
-    this.numberOfBlocks = ((this.canvasW / this.danceBlockx) * ((this.canvasH - this.barArea) / this.danceBlocky)+1),
+    this.danceBlockx = 55,
+    this.danceBlocky = 55,
+    this.numberOfBlocks = ((this.canvasW / this.danceBlockx) * ((this.canvasH - this.barArea) / this.danceBlocky)-1),
     this.colors = ["#ff80ff", "#b3ffcc", "#99ebff"],
     this.colors2 = ["#99ffe6", "#ff99cc", "#ffbb99", "#ffffff"],
     this.blur = 1,
@@ -28,7 +28,6 @@ class danceFloor {
 
     imgBar.src = './images/bar.jpg';
     imgCarmen1.src = './images/carmen-main.png'
-
   }
 
   drawBar() {
@@ -88,7 +87,6 @@ this.ctx.strokeRect(axisX, axisY, this.danceBlockx, this.danceBlocky);
     }
   }
 }
-
 
 //  colors :
 //  #b3daff blue

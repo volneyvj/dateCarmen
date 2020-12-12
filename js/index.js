@@ -8,7 +8,7 @@ const ctx = canvas.getContext('2d');
 class canvasArea {
   constructor() {
     this.canvasW = 800,
-      this.canvasH = 600;
+      this.canvasH = 550;
   }
 };
 
@@ -25,12 +25,11 @@ const timeCounting = new timeCount();
 // criando obstacles 
 
 const obstacles = [
-new Obstacle(canvas, myCanvas.canvasW, "./images/bettyfeia.png", 740, 430, 'left', 10), 
-new Obstacle(canvas, myCanvas.canvasW, "./images/vandiesel.png", 0, 340, 'right', 20),
-new Obstacle(canvas, myCanvas.canvasW, "./images/davidh.png", 0, 260, 'right', 35),
-new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 160, 'left', 65)
+new Obstacle(canvas, myCanvas.canvasW, "./images/bettyfeia.png", 740, 370, 'left', 10), 
+new Obstacle(canvas, myCanvas.canvasW, "./images/vandiesel.png", 0, 300, 'right', 20),
+new Obstacle(canvas, myCanvas.canvasW, "./images/davidh.png", 0, 225, 'right', 35),
+new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 150, 'left', 65)
 ];
-console.log(obstacles);
 
 const audioMusic = new Audio();
 audioMusic.src = "./sound/eletronic.mp3";
@@ -118,10 +117,15 @@ function checkPlayerPosition() {
 
   if (player.playerYposition < 100) {
     let htmlBar = '';
-    htmlBar += `<button type="button" choice="0" class="btn start-bar btn-outline-danger btn-lg" onclick="rollChat(this)">Start Conversation</button>`;
+    htmlBar += `<button type="button" choice="0" id="barbtn" class="btn start-bar btn-outline-danger btn-lg" onclick="rollChat(this)">Start Conversation - Press Space</button>`;
     document.getElementById('chat-area').innerHTML = htmlBar;
     floor.textCome = '';
     clearInterval(checkPlayerpos);
+    document.onkeydown = function(e) {
+      var keyCode = e.keyCode;
+    
+      if(keyCode === 32) rollChat(document.getElementById("barbtn"));
+    }
   }
 }
 
@@ -136,7 +140,10 @@ function barMusicstart() {
   barMusic.play();
 }
 
+
 function rollChat(clicked_btn) {
+
+  document.getElementById('info').style.display = 'none'
   audioMusic.pause();
   setTimeout(barMusicstart, 1000);
 
@@ -168,7 +175,7 @@ function rollChat(clicked_btn) {
   player.score += newQuestions.randomQuestions[chatNumber - 1].answers[lastAnswer].point
 
   let html = '';
-  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bg-date-carmen.png" width="790" height="500"></div>`;
+  html += `<section class="bar"> <div class="bar-background"> <img src="./images/bg-date-carmen.png" width="720" height="500"></div>`;
   html += `<div class="chat">`;
   if (chat.n !== 0) {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">${newQuestions.randomQuestions[chatNumber-1].answers[lastAnswer].cReaction}</div>`;
