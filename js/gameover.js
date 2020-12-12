@@ -20,13 +20,14 @@ function checkGameOver() {
   }
   
   function stop() {
+    document.getElementById('info').style.display = 'none'
     setTimeout(gameOver, 2000);
-    setTimeout(showStart, 9000);   
+    setTimeout(showStart, 7000);   
   }
 
   function win() {
     setTimeout(winner, 1500);
-    setTimeout(showStart, 13000);
+    setTimeout(showStart, 10000);
   }
   
   function gameOver(url) {
