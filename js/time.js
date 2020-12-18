@@ -4,6 +4,6 @@ class timeCount {
     }
 
     countTime() {
-        this.time -=1
+        this.time -= 1
     }
 }

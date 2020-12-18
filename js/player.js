@@ -1,8 +1,8 @@
 class playerOne {
     constructor(canvas, canvasW, canvasH) {
         this.canvas = canvas,
-        this.ctx = this.canvas.getContext("2d"),
-        this.playerWidth = 90,
+            this.ctx = this.canvas.getContext("2d"),
+            this.playerWidth = 90,
             this.playerHeight = 90,
             this.name = "",
             this.score = -1,
@@ -57,18 +57,18 @@ class playerOne {
         }
     }
 
-      top() {
+    top() {
         return this.playerYposition;
-      }
-      bottom() {
+    }
+    bottom() {
         return this.playerYposition + this.playerHeight - 25;
-      }
-      left() {
+    }
+    left() {
         return this.playerXposition;
-      }
-      right() {
+    }
+    right() {
         return this.playerXposition + this.playerWidth - 25;
-      }
+    }
 
 
     crashWith(obstacleIndex) {
@@ -76,18 +76,17 @@ class playerOne {
             this.top() > obstacles[obstacleIndex].bottom() ||
             this.bottom() < obstacles[obstacleIndex].top() ||
             this.left() > obstacles[obstacleIndex].right() ||
-            this.right() < obstacles[obstacleIndex].left() 
-            )
-      }
+            this.right() < obstacles[obstacleIndex].left()
+        )
+    }
 
     playerPosition() {
-        if (this.playerYposition <155) {
+        if (this.playerYposition < 155) {
             floor.grayscale = 0;
             floor.blur = 0;
         }
-      return this.playerYposition;
+        return this.playerYposition;
     }
 
 }
-    
-     
+

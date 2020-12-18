@@ -1,51 +1,51 @@
-const questions = 
-[
-    {
+const questions =
+    [
+        {
             questionNumber: 1,
             cQuestions: "Have a seat! You're kind of handsome yourself.",
             answers: [{
-                        pAnswers: "Hello Gorgeous !!",
-                        point: 1,
-                        cReaction: "Thank you honey!"
-                    },
-                    {
-                        pAnswers: "Do I know you from somewhere?",
-                        point: 0,
-                        cReaction: "Oh, so creative."
-                    },
-                    {
-                        pAnswers: "Nice legs you got there",
-                        point: -1,
-                        cReaction: "What a pervert."
-                    }
-                    ]
-    },
+                pAnswers: "Hello Gorgeous !!",
+                point: 1,
+                cReaction: "Thank you honey!"
+            },
+            {
+                pAnswers: "Do I know you from somewhere?",
+                point: 0,
+                cReaction: "Oh, so creative."
+            },
+            {
+                pAnswers: "Nice legs you got there",
+                point: -1,
+                cReaction: "What a pervert."
+            }
+            ]
+        },
 
-    {
-        questionNumber: 2,
-        cQuestions: "Is this your first time here?",
-        answers: [{
-                    pAnswers: "I come here all the time",
-                    point: -1,
-                    cReaction: "I wonder why you're alone..."
-                },
-                {
-                    pAnswers: "First time actually",
-                    point: 0,
-                    cReaction: "Me too, never been here before"
-                },
-                {
-                    pAnswers: "Not sure, I usually drink a lot and don`t recall",
-                    point: 1,
-                    cReaction: "Hahahaha, you're funny"
-                }
-                ]
-},
+        {
+            questionNumber: 2,
+            cQuestions: "Is this your first time here?",
+            answers: [{
+                pAnswers: "I come here all the time",
+                point: -1,
+                cReaction: "I wonder why you're alone..."
+            },
+            {
+                pAnswers: "First time actually",
+                point: 0,
+                cReaction: "Me too, never been here before"
+            },
+            {
+                pAnswers: "Not sure, I usually drink a lot and don`t recall",
+                point: 1,
+                cReaction: "Hahahaha, you're funny"
+            }
+            ]
+        },
 
-{
-    questionNumber: 3,
-    cQuestions: "What do you do for a living?",
-    answers: [{
+        {
+            questionNumber: 3,
+            cQuestions: "What do you do for a living?",
+            answers: [{
                 pAnswers: "Unemployed at the moment",
                 point: -1,
                 cReaction: "A penniless guy... great."
@@ -61,12 +61,12 @@ const questions =
                 cReaction: "WOW! A true male"
             }
             ]
-},
+        },
 
-{
-    questionNumber: 4,
-    cQuestions: "Do you enjoy any kind of sports",
-    answers: [{
+        {
+            questionNumber: 4,
+            cQuestions: "Do you enjoy any kind of sports",
+            answers: [{
                 pAnswers: "I'm a huge soccer fan!!",
                 point: -1,
                 cReaction: "If you were realy a fan, you`d never say soccer."
@@ -82,15 +82,15 @@ const questions =
                 cReaction: "My father as well..."
             }
             ]
-},
+        },
 
-{
-    questionNumber: 5,
-    cQuestions: "So...",
-    answers: [{
+        {
+            questionNumber: 5,
+            cQuestions: "So...",
+            answers: [{
                 pAnswers: "Can I buy a drink?",
                 point: 1,
-                cReaction: "Thought you`d never ask" 
+                cReaction: "Thought you`d never ask"
             },
             {
                 pAnswers: "So.... what`s up?",
@@ -103,12 +103,12 @@ const questions =
                 cReaction: "Actually yeah. Hahaha!"
             }
             ]
-},
+        },
 
-{
-    questionNumber: 6,
-    cQuestions: "What are you drinking today?",
-    answers: [{
+        {
+            questionNumber: 6,
+            cQuestions: "What are you drinking today?",
+            answers: [{
                 pAnswers: "Aperol Spritz",
                 point: 1,
                 cReaction: "Nice, I'll have the same as you"
@@ -124,12 +124,12 @@ const questions =
                 cReaction: "That`s ok. Keep hydrated."
             }
             ]
-},
+        },
 
-{
-    questionNumber: 7,
-    cQuestions: "You look well dress tonight. Where do you buy your clothes?",
-    answers: [{
+        {
+            questionNumber: 7,
+            cQuestions: "You look well dress tonight. Where do you buy your clothes?",
+            answers: [{
                 pAnswers: "My mom buys it for me",
                 point: 0,
                 cReaction: "You must be busy then."
@@ -145,13 +145,13 @@ const questions =
                 cReaction: "Wow! So fancy."
             }
             ]
-},
+        },
 
 
-{
-    questionNumber: 8,
-    cQuestions: "The light is low here. I cannot see the color of your eyes properly.",
-    answers: [{
+        {
+            questionNumber: 8,
+            cQuestions: "The light is low here. I cannot see the color of your eyes properly.",
+            answers: [{
                 pAnswers: "That`s because I'm wearing glasses",
                 point: 0,
                 cReaction: "Oh yeah, I can see it now."
@@ -167,12 +167,12 @@ const questions =
                 cReaction: "That was kind of lame."
             }
             ]
-},
+        },
 
-{
-    questionNumber: 9,
-    cQuestions: "Did you tip the bartender? My drink was $ 11,12, yours was half of it, they ask 15% tip.",
-    answers: [{
+        {
+            questionNumber: 9,
+            cQuestions: "Did you tip the bartender? My drink was $ 11,12, yours was half of it, they ask 15% tip.",
+            answers: [{
                 pAnswers: "I gave  $2,50",
                 point: 1,
                 cReaction: "Clever guy !"
@@ -188,12 +188,12 @@ const questions =
                 cReaction: "Seriously???"
             }
             ]
-},
+        },
 
-{
-    questionNumber: 10,
-    cQuestions: "I'm kind of bored today, I may not stay longer",
-    answers: [{
+        {
+            questionNumber: 10,
+            cQuestions: "I'm kind of bored today, I may not stay longer",
+            answers: [{
                 pAnswers: "Can I give you a ride home?",
                 point: 0,
                 cReaction: "Not so fast honey."
@@ -209,12 +209,12 @@ const questions =
                 cReaction: "Can't say the same here"
             }
             ]
-},
+        },
 
-{
-    questionNumber: 11,
-    cQuestions: "Oh, I'm so worried about my puppy. Do you enjoy animals?",
-    answers: [{
+        {
+            questionNumber: 11,
+            cQuestions: "Oh, I'm so worried about my puppy. Do you enjoy animals?",
+            answers: [{
                 pAnswers: "Yes, I am a cat person.",
                 point: -1,
                 cReaction: "Ugh, hate cats."
@@ -230,9 +230,9 @@ const questions =
                 cReaction: "That's fine. I am not a vegetarian myself."
             }
             ]
-}   
+        }
 
-];
+    ];
 
 class questionsGame {
     constructor(questions) {
@@ -247,23 +247,23 @@ class questionsGame {
 
     shuffleQuestions() {
         let copyQuestions = this.questions.slice(0);
-     
 
-        for (let i = 0; i<=this.questions.length-1; i += 1 ){
-            
-          if (i === 0) {   
-            this.randomQuestions.push(copyQuestions[0]);
-          }
-          else if (i === 1) {
-            this.randomQuestions.push(copyQuestions[1]);
-            copyQuestions.splice(0, 2);  
-          }
-          else {
-            let randomN = Math.floor(Math.random() * copyQuestions.length)
-            this.randomQuestions.push(copyQuestions[randomN]);
-            copyQuestions.splice(randomN, 1);  
+
+        for (let i = 0; i <= this.questions.length - 1; i += 1) {
+
+            if (i === 0) {
+                this.randomQuestions.push(copyQuestions[0]);
+            }
+            else if (i === 1) {
+                this.randomQuestions.push(copyQuestions[1]);
+                copyQuestions.splice(0, 2);
+            }
+            else {
+                let randomN = Math.floor(Math.random() * copyQuestions.length)
+                this.randomQuestions.push(copyQuestions[randomN]);
+                copyQuestions.splice(randomN, 1);
+            }
         }
-      }
     }
 }
 
@@ -295,12 +295,12 @@ class chatBoards {
         this.ctx.textAlign = 'left';
         this.ctx.font = '24px serif';
         if (this.n > 0) {
-        this.ctx.fillText(newQuestions.randomQuestions[this.n-1].answers[0].cReaction, 130, 80);
+            this.ctx.fillText(newQuestions.randomQuestions[this.n - 1].answers[0].cReaction, 130, 80);
         }
         this.ctx.fillText(newQuestions.randomQuestions[this.n].cQuestions, 130, 120);
-        
+
     }
-        
+
     drawChatplayer() {
         this.ctx.strokeStyle = '#1c100b';
         this.ctx.lineWidth = 10;

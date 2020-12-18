@@ -25,10 +25,10 @@ const timeCounting = new timeCount();
 // criando obstacles 
 
 const obstacles = [
-new Obstacle(canvas, myCanvas.canvasW, "./images/bettyfeia.png", 740, 370, 'left', 10), 
-new Obstacle(canvas, myCanvas.canvasW, "./images/vandiesel.png", 0, 300, 'right', 20),
-new Obstacle(canvas, myCanvas.canvasW, "./images/davidh.png", 0, 225, 'right', 35),
-new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 150, 'left', 65)
+  new Obstacle(canvas, myCanvas.canvasW, "./images/bettyfeia.png", 740, 370, 'left', 10),
+  new Obstacle(canvas, myCanvas.canvasW, "./images/vandiesel.png", 0, 300, 'right', 20),
+  new Obstacle(canvas, myCanvas.canvasW, "./images/davidh.png", 0, 225, 'right', 35),
+  new Obstacle(canvas, myCanvas.canvasW, "./images/noah.png", 730, 150, 'left', 65)
 ];
 
 const audioMusic = new Audio();
@@ -56,14 +56,14 @@ document.getElementById('start_button').onclick = () => {
   startMyGame();
 };
 
-document.onkeydown = function(e) {
+document.onkeydown = function (e) {
   var keyCode = e.keyCode;
-  if(keyCode === 32) startMyGame();
+  if (keyCode === 32) startMyGame();
 }
 
 
 
-  function startMyGame() {
+function startMyGame() {
   clearCanvas();
   loop = setInterval(startGame, 300);
   document.getElementById('start_button').style.display = 'none'
@@ -71,7 +71,7 @@ document.onkeydown = function(e) {
   document.getElementById('time').style.display = 'inherit'
   contagem = setInterval(timeMid, 1000);
   audioMusic.play();
-  }
+}
 
 
 function startGame() {
@@ -82,7 +82,7 @@ function startGame() {
   player.drawPlayer();
   player.playerPosition();
 
-  for (let i=0; i<obstacles.length; i+=1) {
+  for (let i = 0; i < obstacles.length; i += 1) {
     obstacles[i].drawObst(i);
     obstacles[i].newObstpos(i);
   }
@@ -121,10 +121,10 @@ function checkPlayerPosition() {
     document.getElementById('chat-area').innerHTML = htmlBar;
     floor.textCome = '';
     clearInterval(checkPlayerpos);
-    document.onkeydown = function(e) {
+    document.onkeydown = function (e) {
       var keyCode = e.keyCode;
-    
-      if(keyCode === 32) rollChat(document.getElementById("barbtn"));
+
+      if (keyCode === 32) rollChat(document.getElementById("barbtn"));
     }
   }
 }
@@ -135,7 +135,7 @@ function timeMid() {
   htmlTempo += `${timeCounting.time}`;
   document.getElementById('timeMid').innerHTML = htmlTempo;
 }
-  
+
 function barMusicstart() {
   barMusic.play();
 }
@@ -178,7 +178,7 @@ function rollChat(clicked_btn) {
   html += `<section class="bar"> <div class="bar-background"> <img src="./images/bg-date-carmen.png" width="720" height="500"></div>`;
   html += `<div class="chat">`;
   if (chat.n !== 0) {
-    html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">${newQuestions.randomQuestions[chatNumber-1].answers[lastAnswer].cReaction}</div>`;
+    html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">${newQuestions.randomQuestions[chatNumber - 1].answers[lastAnswer].cReaction}</div>`;
   } else {
     html += `<div class="carmen-chat"><div class="questions"><div class="carmen-reaction">Hello you there ! </div>`;
   }
